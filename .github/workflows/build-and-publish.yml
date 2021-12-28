@@ -19,7 +19,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            ngoduykhanh/powerdns-admin
+            dcroper/powerdns-admin
           tags: |
             type=ref,event=tag
             type=semver,pattern={{version}}
@@ -43,7 +43,7 @@ jobs:
           context: ./
           file: ./docker/Dockerfile
           push: true
-          tags: ngoduykhanh/powerdns-admin:latest
+          tags: dcroper/powerdns-admin:latest
 
       - name: Build release image
         uses: docker/build-push-action@v2
